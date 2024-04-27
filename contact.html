@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İsim ve Soyisim Formu</title>
+</head>
+<body>
+    <!-- contact section -->
+    <section class="contact_section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 px-0">
+                    <div class="img-box">
+                        <!-- <img src="images/contact-img.jpg" alt=""> <img src="images/contact-img.jpg" alt=""> -->
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="form_container pr-0 pr-lg-5 mr-0 mr-lg-2">
+                        <div class="heading_container">
+                            <h2>
+                                Yakını Mısınız?
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end contact section -->
+    <!-- info section -->
+    <section class="info_section layout_padding2">
+        <div class="container">
+            <div class="info_items">
+                <a href="">
+                    <div class="item ">
+                        <div class="img-box box-1">
+                            <img src="" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <p>
+                                Location
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="item ">
+                        <div class="img-box box-2">
+                            <img src="" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <p>
+                                +02 1234567890
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="item ">
+                        <div class="img-box box-3">
+                            <img src="" alt="">
+                        </div>
+                        <div class="detail-box">
+                            <p>
+                                demo@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- end info_section -->
+    <!-- footer section -->
+    <footer class="container-fluid footer_section">
+        <p>
+            &copy; 2020 All Rights Reserved. Design by
+            <a href="https://www.instagram.com/onur.cnkya/">onurcinkaya.info</a>
+        </p>
+    </footer>
+    <!-- footer section -->
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soru Formu</title>
+    <script>
+      function kontrolVeYonlendir() {
+        var isim = document.getElementById("isim").value.toLowerCase();
+        var soyisim = document.getElementById("soyisim").value.toLowerCase();
+    
+        if (isim === "onur" && soyisim === "çinkaya") {
+          var yasCevabi = prompt("Onur Çinkaya, kaç yaşındasınız?");
+          if (yasCevabi === "28") {
+            window.location.href = "hidden_page.html";
+            return;
+          }
+        } else if (isim === "ahmet" && soyisim === "yılmaz") {
+          var neredeYasiyorCevabi = prompt("Ahmet Yılmaz, nerede yaşıyorsunuz?");
+          if (neredeYasiyorCevabi.toLowerCase() === "izmir") {
+            window.location.href = "hidden_page.html";
+            return;
+          }
+        }
+    
+        // Yanlış cevaplar veya gerekli bilgilerin eksik olması durumunda uyarı verilir
+        alert("Üzgünüz, yanlış bilgi veya cevap. Lütfen tekrar deneyin.");
+      }
+    </script>
+    </head>
+    <body>
+    
+    <form onsubmit="kontrolVeYonlendir(); return false;">
+      <label for="isim">İsim:</label>
+      <input type="text" id="isim" name="isim" required><br><br>
+      <label for="soyisim">Soyisim:</label>
+      <input type="text" id="soyisim" name="soyisim" required><br><br>
+      <input type="submit" value="Devam Et">
+    </form>
+    
+    </body>
+    </html>
+
+
+</body>
+</html>

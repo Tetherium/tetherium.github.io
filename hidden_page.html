@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        var isim = prompt("İsminiz nedir?");
+        var soyisim = prompt("Soyisminiz nedir?");
+
+        if (isim === "onur" && soyisim === "çinkaya") {
+            var yasCevabi = prompt("Onur Çinkaya, kaç yaşındasınız?");
+            if (yasCevabi === "28") {
+                window.location.href = isim + "_" + soyisim + ".html";
+            }
+        } else if (isim === "ahmet" && soyisim === "yılmaz") {
+            var neredeYasiyorCevabi = prompt("Ahmet Yılmaz, nerede yaşıyorsunuz?");
+            if (neredeYasiyorCevabi.toLowerCase() === "izmir") {
+                window.location.href = isim + "_" + soyisim + ".html";
+            }
+        }
+    </script>
+
+    <button onclick="window.location.href='hedef_sayfa.html'">Yönlendirme Düğmesi</button>
+</body>
+</html>

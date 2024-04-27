@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soru Formu</title>
+<script>
+  function kontrolVeYonlendir() {
+    var isim = document.getElementById("isim").value.toLowerCase();
+    var soyisim = document.getElementById("soyisim").value.toLowerCase();
+
+    if (isim === "onur" && soyisim === "çinkaya") {
+      var yasCevabi = prompt("Onur Çinkaya, kaç yaşındasınız?");
+      if (yasCevabi === "28") {
+        window.location.href = isim + "_" + soyisim + ".html";
+        return;
+      }
+    } else if (isim === "ahmet" && soyisim === "yılmaz") {
+      var neredeYasiyorCevabi = prompt("Ahmet Yılmaz, nerede yaşıyorsunuz?");
+      if (neredeYasiyorCevabi.toLowerCase() === "izmir") {
+        window.location.href = isim + "_" + soyisim + ".html";
+        return;
+      }
+    }
+
+    // Yanlış cevaplar veya gerekli bilgilerin eksik olması durumunda uyarı verilir
+    alert("Üzgünüz, yanlış bilgi veya cevap. Lütfen tekrar deneyin.");
+  }
+</script>
+</head>
+<body>
+
+<form onsubmit="kontrolVeYonlendir(); return false;">
+  <label for="isim">İsim:</label>
+  <input type="text" id="isim" name="isim" required><br><br>
+  <label for="soyisim">Soyisim:</label>
+  <input type="text" id="soyisim" name="soyisim" required><br><br>
+  <input type="submit" value="Devam Et">
+</form>
+
+</body>
+</html>

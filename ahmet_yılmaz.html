@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tam Ekran Video Oynatma</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  #video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div id="video-container">
+  <div id="overlay" onclick="playFullscreen()">Tam Ekran Video Oynat</div>
+  <video id="myVideo" controls>
+    <source src="birds.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<script>
+  function playFullscreen() {
+    var video = document.getElementById('myVideo');
+    video.play();
+    video.addEventListener('ended', function() {
+      window.location.href = 'yeni_sayfa.html';
+    });
+  }
+</script>
+</body>
+</html>
