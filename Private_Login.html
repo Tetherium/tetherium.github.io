@@ -22,13 +22,21 @@
           window.location.href = isim + "_" + soyisim + ".html";
           return;
         }
-      } else if (isim === "ahmet" && soyisim === "yılmaz") {
-        var neredeYasiyorCevabi = prompt("Ahmet Yılmaz, nerede yaşıyorsunuz?");
-        if (neredeYasiyorCevabi.toLowerCase() === "izmir") {
+      } 
+       if (isim === "hamza" && soyisim === "hamza") {
+        var neredeYasiyorCevabi = prompt("hamza hamza, hazreti hamza yolda yürürken hangi hayvanı görüp müslüman olmuştur");
+        if (neredeYasiyorCevabi.toLowerCase() === "karınca") {
           window.location.href = isim + "_" + soyisim + ".html";
           return;
         }
       }
+      if (isim === "ahmet" && soyisim === "yılmaz") {
+        var yasCevabi = prompt("nerelidir?");
+        if (yasCevabi === "izmir") {
+          window.location.href = isim + "_" + soyisim + ".html";
+          return;
+        }
+      } 
   
       alert("Üzgünüz, yanlış bilgi veya cevap. Lütfen tekrar deneyin.");
     }
