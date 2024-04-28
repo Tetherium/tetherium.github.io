@@ -2,11 +2,332 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soru Formu</title>
-<h1> onur çinkaya sayfası</h1>
+
+<title>Onur Çinkaya</title>
+
+<style media="screen">
+
+body{
+    background-color: #383838;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+
+.circle{
+    width: 100px; 
+        height: 100px; 
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    position: absolute;
+    left: -250px;
+    top: -75px;
+    border-radius: 50%; 
+
+}
+
+.circle0{
+    width: 200px; 
+        height: 200px; 
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    position: absolute;
+    left: -475px;
+    top: -75px;
+    border-radius: 50%; 
+
+}
+.circle1{
+    width: 75px; 
+        height: 75px; 
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    position: absolute;
+    left: -525px;
+    top: 120px;
+    border-radius: 50%; 
+
+}
+
+
+.circle2{
+    width: 200px; 
+        height: 200px; 
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    position: absolute;
+    right: -475px;
+    bottom: -75px;
+    border-radius: 50%;
+
+}
+.circle3{
+    width: 100px; 
+        height: 100px; 
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    position: absolute;
+    right: -250px;
+    bottom: -75px;
+    border-radius: 50%;
+}
+.circle4{
+    width: 75px; 
+        height: 75px; 
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    position: absolute;
+    right: -525px;
+    bottom: 120px;
+    border-radius: 50%;
+}
+
+.blur{
+    height: 520px;
+    width: 850px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 90%;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+.blur1{
+    height: 520px;
+    width: 280px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    right: 80%;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+.blur1 button {
+    height: 50px;
+    width: 250px;
+  color: #ffffff; 
+  font-size: 18px; 
+  background: linear-gradient(
+        to right,
+        #2f5ae6,
+        #25acfa
+    );
+border: none;
+    position: absolute;
+    top: 525px;
+    left: 55px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.pp img{
+    width: 225px; 
+    height: 225px; 
+    position: absolute;
+    left: -380px;
+    top: -20px;
+    max-width: 100%; 
+  max-height: 100%; 
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+
+.isim {
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 250px;
+    color: #ffffff; 
+    font-size: 18px; 
+    background: #b6b6b6;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px solid rgb(255, 255, 255); ;
+    position: absolute;
+    top: 250px;
+    left: -390px;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    
+}
+.uyruk {
+
+
+padding-top: 15px;
+padding-bottom: 15px;
+width: 250px;
+color: #ffffff; 
+font-size: 18px; 
+background: #b6b6b6;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+border: 2px solid rgb(255, 255, 255); ;
+position: absolute;
+top: 325px;
+left: -390px;
+border-radius: 20px;
+text-align: center;
+margin: auto;
+
+
+}
+.yakınlık {
+
+
+padding-top: 15px;
+padding-bottom: 15px;
+width: 250px;
+color: #ffffff; 
+font-size: 18px; 
+background: #b6b6b6;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+border: 2px solid rgb(255, 255, 255); ;
+position: absolute;
+top: 400px;
+left: -390px;
+border-radius: 20px;
+text-align: center;
+margin: auto;
+
+
+}
+
+.borsa img {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 600px;
+  height: 225px;
+  position: absolute;
+    right: 30px;
+    bottom: 300px;
+    max-width: 100%; 
+  max-height: 100%; 
+  border-radius: 10%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+.borsa img:hover {
+  transform: scale(1.05); 
+  transition: transform 0.2s ease; 
+}
+
+.futbol img {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 600px;
+  height: 225px;
+  position: absolute;
+    right: 30px;
+    bottom: -5px;
+    max-width: 100%; 
+  max-height: 100%; 
+  border-radius: 10%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+.futbol img:hover {
+  transform: scale(1.05); 
+  transition: transform 0.2s ease; 
+}
+.forum img {
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 300px;
+  height: 600px;
+  position: absolute;
+    right: -375px;
+    bottom: -5px;
+    max-width: 100%; 
+  max-height: 100%; 
+  border-radius: 10%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+.forum img:hover {
+  transform: scale(1.05); 
+  transition: transform 0.2s ease; 
+}
+
+
+    </style>
 </head>
 <body>
+
+ 
+    <div class="background">
+        <div class="circle"></div>
+        <div class="circle0"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="blur"></div>
+        <div class="blur1"></div>
+        
+        <div class="borsa">
+            <a href="borsa.html">
+                <img src="borsa.png">
+            </a>
+        </div>
+
+        <div class="futbol">
+            <a href="futbol.html">
+                <img src="futbol.png">
+            </a>
+        </div>
+
+        <div class="forum">
+            <a href="forum.html">
+                <img src="forum.jpg">
+            </a>
+        </div>
+
+          <div class="blur1">
+              <p></p>
+            <button onclick="window.location.href='onur_profil.html'">Profil</button>
+        </div>
+        <div class="isim">İsim : Onur Çinkaya</div>
+        <div class="uyruk">Uyruk : Türk</div>
+        <div class="yakınlık">Yakınlık : Kendisi</div>
+        <div class="pp">
+            <img src="kaplan.jpg">
+        </div>
+        
+    </div>
+
+       
 
 
 </body>
