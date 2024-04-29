@@ -35,25 +35,26 @@
         }
 
     </style>
-</head>
-<body>
     <script>
-        var isim = prompt("İsminiz nedir?");
-        var soyisim = prompt("Soyisminiz nedir?");
-
-        if (isim === "onur" && soyisim === "çinkaya") {
+        
+      
+          if (isim === "onur" && soyisim === "çinkaya") {
             var yasCevabi = prompt("Onur Çinkaya, kaç yaşındasınız?");
             if (yasCevabi === "28") {
-                window.location.href = isim + "_" + soyisim + ".html";
+              window.location.href = isim + "_" + soyisim + ".html";
+              return;
             }
-        } else if (isim === "ahmet" && soyisim === "yılmaz") {
+          } else if (isim === "ahmet" && soyisim === "yılmaz") {
             var neredeYasiyorCevabi = prompt("Ahmet Yılmaz, nerede yaşıyorsunuz?");
             if (neredeYasiyorCevabi.toLowerCase() === "izmir") {
-                window.location.href = isim + "_" + soyisim + ".html";
+              window.location.href = isim + "_" + soyisim + ".html";
+              return;
             }
-        }
-    </script>
-
-    <button onclick="window.location.href='hedef_sayfa.html'">Yönlendirme Düğmesi</button>
-</body>
+          }
+      
+      </script>
+</head>
+<body>
+     <button onclick="window.location.href='hedef_sayfa.html'">Yönlendirme Düğmesi</button>
+</body>  
 </html>
