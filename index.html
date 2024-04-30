@@ -49,6 +49,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
     <style media="screen">
+      @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+:root {
+  --clr-neon: #00ffff;
+  --clr-bg: #001414;
+  --font-size: 2rem;
+}
       *,
 *:before,
 *:after{
@@ -60,6 +67,8 @@ body{
   background-image: url('cyberpunk-1.jpg');
     background-size: cover; 
     background-repeat: no-repeat; 
+
+
 }
 .background{
     width: 430px;
@@ -140,17 +149,67 @@ input{
 ::placeholder{
     color: #e5e5e5;
 }
-button{
-    margin-top: 10px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #080710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
+
+
+.neon {
+  margin-top: -10px;
+  font-size: var(--font-size);
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border: var(--clr-neon) 0.1em solid;
+  padding: 0.35em 2.4em;
+  border-radius: 0.25em;
+  text-shadow: 
+    0 0 .20em #FFF7,
+    0 0 .30em var(--clr-neon);
+  box-shadow: 
+    inset 0 5 .9em var(--clr-neon),
+          0 5 1em var(--clr-neon);
 }
+
+.neon::before {
+  content: "";
+  position: absolute;
+  top: 220%;
+  left: 100px;
+  width: 150px;
+  height: 100px;
+  background: var(--clr-neon);
+  transform: 
+    perspective(0.9em)
+    rotateX(10deg) 
+    scale(3, 0.40);
+  filter: blur(0.4em);
+  opacity: 0.6;
+  pointer-events: none;
+  transition: opacity 100ms linear;
+}
+
+.neon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-neon);
+  box-shadow: 0 0 2em var(--clr-neon);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 100ms linear;
+}
+
+.neon:hover::after {
+  opacity: 1;
+}
+.neon:hover, .neon:focus {
+  color: white;
+}
+.neon:hover::before {
+  opacity: 0.8;
+}
+
 .social{
    margin-top: 10px;
   display: flex;
@@ -173,6 +232,9 @@ button{
 .social i{
   margin-right: 4px;
 }
+.gizli-buton {
+        background-color: transparent;
+    }
 
     </style>
 </head>
@@ -192,8 +254,10 @@ button{
             <input type="text" id="isim" name="isim" required><br><br>
             <label for="soyisim">Soyisim:</label>
             <input type="text" id="soyisim" name="soyisim" required><br><br>
-           
-        <button>Giriş Yap</button>
+           <button  class="gizli-buton">
+            <a class="neon">Giriş Yap</a>
+          </button> 
+          </br> </br> 
         <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
