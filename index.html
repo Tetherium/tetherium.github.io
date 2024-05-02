@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Özel Giriş</title>
   
-
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -37,19 +36,17 @@
           return;
         }
       } 
-  
       alert("Üzgünüz, yanlış bilgi veya cevap. Lütfen tekrar deneyin.");
     }
   </script>
   <!-- Design by foolishdeveloper.com -->
     <title>Glassmorphism login Form Tutorial in html css</title>
- 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
     <style media="screen">
-      @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
 :root {
   --clr-neon: #00ffff;
@@ -65,10 +62,8 @@
 }
 body{
   background-image: url('cyberpunk-1.jpg');
-    background-size: cover; 
-    background-repeat: no-repeat; 
-
-
+  background-size: cover; 
+  background-repeat: no-repeat; 
 }
 .background{
     width: 430px;
@@ -128,7 +123,6 @@ form h3{
     line-height: 42px;
     text-align: center;
 }
-
 label{
     display: block;
     margin-top: 10px;
@@ -149,8 +143,6 @@ input{
 ::placeholder{
     color: #e5e5e5;
 }
-
-
 .neon {
   margin-top: -10px;
   font-size: var(--font-size);
@@ -167,7 +159,6 @@ input{
     inset 0 5 .9em var(--clr-neon),
           0 5 1em var(--clr-neon);
 }
-
 .neon::before {
   content: "";
   position: absolute;
@@ -185,7 +176,6 @@ input{
   pointer-events: none;
   transition: opacity 100ms linear;
 }
-
 .neon::after {
   content: "";
   position: absolute;
@@ -199,7 +189,6 @@ input{
   opacity: 0;
   transition: opacity 100ms linear;
 }
-
 .neon:hover::after {
   opacity: 1;
 }
@@ -209,7 +198,6 @@ input{
 .neon:hover::before {
   opacity: 0.8;
 }
-
 .social{
    margin-top: 10px;
   display: flex;
@@ -239,33 +227,23 @@ input{
     </style>
 </head>
 <body>
-
- 
-    <div class="body">
-<a href="cyberpunk.jpg"></a>
-      
- </div>
-
-       
-
+  <div class="body">
+<a href="cyberpunk.jpg"></a>    
+  </div>
         <form onsubmit="kontrolVeYonlendir(); return false;">
             <h3>Özel Giriş</h3>
             <label for="isim">İsim:</label>
             <input type="text" id="isim" name="isim" required><br><br>
             <label for="soyisim">Soyisim:</label>
             <input type="text" id="soyisim" name="soyisim" required><br><br>
-           <button  class="gizli-buton">
+            <button  class="gizli-buton">
             <a class="neon">Giriş Yap</a>
-          </button> 
-          </br> </br> 
-        <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
-        </div>
+          </button> </br> </br> 
+           <div class="social">
+           <div class="go"><i class="fab fa-google"></i>  Google</div>
+           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+  </div>
     </form>
-</body>
 </html>
-<!-- partial -->
-
 </body>
 </html>
