@@ -25,7 +25,7 @@
     <table id="csv-table"></table>
 
     <script>
-        Papa.parse("projem/veriler.csv", {
+        Papa.parse("veriler.csv", {
             download: true,
             complete: function(results) {
                 const table = document.getElementById('csv-table');
