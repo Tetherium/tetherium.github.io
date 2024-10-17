@@ -1,0 +1,28 @@
+<script>
+    Papa.parse("C:/xampp/htdocs/veriler.csv", {  // Dosya adını burada kontrol et
+        download: true,
+        complete: function(results) {
+            const table = document.getElementById('csv-table');
+            
+            // Başlıkları ekle
+            const headerRow = document.createElement('tr');
+            results.data[0].forEach(header => {
+                const th = document.createElement('th');
+                th.textContent = header;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+
+            // Verileri ekle
+            for (let i = 1; i < results.data.length; i++) {
+                const row = document.createElement('tr');
+                results.data[i].forEach(cell => {
+                    const td = document.createElement('td');
+                    td.textContent = cell;
+                    row.appendChild(td);
+                });
+                table.appendChild(row);
+            }
+        }
+    });
+</script>
